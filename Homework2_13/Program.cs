@@ -7,31 +7,18 @@
 
 Console.Write("Введите число и нажмите Enter: ");
 int x = Convert.ToInt32(Console.ReadLine());
-
 if (x <= 99)
 {
     Console.WriteLine("Третьей цифры нет");
 }
 else
 {
-    if (99 < x || x <= 999)
+    while (x > 999)
     {
+        x = x / 10;
+    }
+    {
+        Console.Write("Третья цифра в вашем числе: ");
         Console.WriteLine(x % 10);
     }
-    else
-    {
-        if (999 < x || x <= 9999)
-        {
-            x = x / 10 % 10;
-            Console.WriteLine(x);
-        }
-
-        /*else
-        {
-            Console.WriteLine("попробуйте другое число");
-        }*/
-    }
 }
-
-
-
